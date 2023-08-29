@@ -45,11 +45,20 @@ document.getElementById("increasebtn").onclick = function(){
 let x,y;
 
 document.getElementById("rollbtn").onclick = function(){
-    x = Math.floor(Math.random()* 6)
+    x = Math.ceil(Math.random()* 6)
+    y = Math.ceil(Math.random()* 6)
     document.getElementById("xlabel").innerHTML = x;
+    document.getElementById("ylabel").innerHTML = x;
+    console.log(y)
     console.log(x)
 }
-document.getElementById("rollbtn").onclick = function(){
-    y = Math.floor(Math.random()* 6)
-    document.getElementById("ylabel").innerHTML = x;
-    console.log(y)}
+//string properties
+firstname = "me you"
+console.log(firstname.charAt(3))
+// indexOf, lastIndexof,replaceAll, trim
+// string.
+
+// slice method
+// methos chaining, adding methods in the same lines of code
+    
+   

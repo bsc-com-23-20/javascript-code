@@ -42,3 +42,35 @@ console.log( "Today is: " + dayOfWeek + ".");
 console.log(`Today is: ${dayOfWeek}.`);
 
  console.log(`Current time is: ${hours} ${ampm} : ${minutes} : ${seconds}`);
+
+ function print_current_page()
+{
+window.print();
+}
+
+
+// a fumction to display the current date
+function getCurrentDate() {
+  const today = new Date();
+  const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed, so we add 1.
+  const day = String(today.getDate()).padStart(2, '0');
+  const year = today.getFullYear();
+
+  const dateFormats = [
+    `${month}-${day}-${year}`,
+    `${month}/${day}/${year}`,
+    `${day}-${month}-${year}`,
+    `${day}/${month}/${year}`
+  ];// displaying the date in different formats
+
+  return dateFormats;
+}
+const dateFormats = getCurrentDate();
+// Print a header message indicating that we're displaying current date formats.
+console.log('Current Date Formats:');
+
+// Iterate over each date format in the 'dateFormats' array using the forEach method.
+dateFormats.forEach(format => {
+  // For each date format, log it to the console.
+  console.log(format);
+});

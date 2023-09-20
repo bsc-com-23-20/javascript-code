@@ -74,3 +74,33 @@ dateFormats.forEach(format => {
   // For each date format, log it to the console.
   console.log(format);
 });
+
+
+
+// javascript code to display th area of a trianfle given 3 dimensions
+
+var side1 = 7;
+var side2 = 7;
+var side3 = 5;
+function Area(){
+var semiperimeter = (side1 + side2 + side3)/2
+var area = Math.sqrt(semiperimeter*((semiperimeter-side1)*(semiperimeter-side2)*(semiperimeter-side3)))
+return area;
+}
+ var area = Area();
+console.log(area)//displaying the output
+
+// function to check if the given year is a leap year
+function isLeapYear(year) {
+  // Leap year condition: divisible by 4 and not divisible by 100, or divisible by 400.
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    return true; // It's a leap year.
+  } else {
+    return false; // It's not a leap year.
+  }
+}
+console.log(isLeapYear(2016));
+console.log(isLeapYear(2000));
+console.log(isLeapYear(1700));
+console.log(isLeapYear(1800));
+console.log(isLeapYear(100));
